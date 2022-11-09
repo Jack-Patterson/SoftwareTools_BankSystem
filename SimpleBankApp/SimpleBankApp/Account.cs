@@ -9,74 +9,69 @@ namespace SimpleBankApp
     public class Account
     {
 
-        int accountID;
-        string accountName;
-        string iban;
-        int pac;
-        float balance;
-
-        public Account()
+        int AccountId;
+        string Name;
+        string Iban;
+        int Pac;
+        float Balance; 
+ 
+        public Account(int AccountId, string Name, string Iban, int Pac, float Balance)
         {
-
+            this.AccountId = AccountId;
+            this.Name = Name;
+            this.Iban = Iban;
+            this.Pac = Pac;
+            this.Balance = Balance;
         }
 
-        public Account(int accountID, string accountName, string iban, int pac, float balance)
+        public int getAccountId()
         {
-            this.accountID = accountID;
-            this.accountName = accountName;
-            this.iban = iban;
-            this.pac = pac;
-            this.balance = balance;
-        }
-
-        public int getAccountID()
-        {
-            return accountID;
+            return AccountId;
         }
 
         public string getAccountName()
         {
-            return accountName;
+            return Name;
         }
 
         public string getIban()
         {
-            return iban;
+            return Iban;
         }
 
         public int getPac()
         {
-            return pac;
+            return Pac;
         }
 
         public float getBalance()
         {
-            return balance;
+            return Balance;
         }
 
-        public void setAccountId(int customerAccountID)
+        public void setaccountId(int customerAccountId)
         {
-            accountID = customerAccountID;
+            AccountId = customerAccountId;
         }
 
         public void setAccountName(string customerAccountName)
         {
-            accountName = customerAccountName;
+            Name = customerAccountName;
         }
 
         public void setIban(string customerIban)
         {
-            iban = customerIban;
+            Iban = customerIban;
         }
 
         public void setPac(int customerPac)
         {
-            pac = customerPac;
+            Pac = customerPac;
         }
 
         public void setBalance(float customerBalance)
         {
-            balance = customerBalance;
+            Balance = customerBalance;
         }
 
     }
