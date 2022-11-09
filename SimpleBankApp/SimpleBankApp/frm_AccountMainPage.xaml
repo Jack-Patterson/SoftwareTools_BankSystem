@@ -1,0 +1,40 @@
+﻿<Window x:Class="SimpleBankApp.frm_AccountMainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleBankApp"
+        mc:Ignorable="d"
+        Title="frm_AccountMainPage" Height="450" Width="800" >
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="145*"/>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="48*"/>
+                <RowDefinition Height="48*"/>
+                <RowDefinition Height="48*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="img_Background" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="7" Source="/SimpleBankMainPage.jpg" HorizontalAlignment="Left" VerticalAlignment="Center" Height="430" Width="800"/>
+            <Image Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" VerticalAlignment="Center" Width="200" Source="/Logo_NEW_NOBG.png" Stretch="Fill" Margin="100,0,0,0"/>
+            <Label x:Name="lbl_Welcome" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1"  Content="Hello, " HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Comic Sans MS"/>
+            <Label x:Name="lbl_BalanceHeader" Content="Balance :" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Height="26" FontFamily="Comic Sans MS"/>
+            <ListView x:Name="lstView_Transactions" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="3" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+        </Grid>
+    </Grid>
+</Window>
