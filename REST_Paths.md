@@ -25,3 +25,5 @@ GetAllTransactionsForID/{Id}
 ### CreateTransaction
 CreateTransaction
 (with added body)
+### GetNextTransactionID
+GetNextTransactionID
