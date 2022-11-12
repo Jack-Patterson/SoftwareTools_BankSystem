@@ -40,7 +40,12 @@ namespace SimpleBankApp
 
             lstView_Transactions.ItemsSource= TransactionList;
 
+            
         }
 
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Parentform.Close();
+        }
     }
 }

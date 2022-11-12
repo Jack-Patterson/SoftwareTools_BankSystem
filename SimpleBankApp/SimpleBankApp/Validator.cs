@@ -79,7 +79,7 @@ namespace SimpleBankApp
 
         private static Boolean EmptyTextCheck(String accNumber, String PAC)
         {
-            if(accNumber.Equals(null) || PAC.Equals(null))
+            if(accNumber.Equals("") || PAC.Equals(""))
             {
                 return true;
             }
