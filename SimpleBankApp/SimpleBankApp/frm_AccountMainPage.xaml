@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleBankApp"
         mc:Ignorable="d"
-        Title="frm_AccountMainPage" Height="450" Width="800" >
+        Title="frm_AccountMainPage" Height="450" Width="800" Closed="Window_Closed" >
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -26,7 +26,7 @@
             <Image Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" VerticalAlignment="Center" Width="200" Source="/Logo_NEW_NOBG.png" Stretch="Fill" Margin="100,0,0,0"/>
             <Label x:Name="lbl_Welcome" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="1"  Content="Hello, " HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Comic Sans MS"/>
             <Label x:Name="lbl_BalanceHeader" Content="Balance :" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left"  VerticalAlignment="Center" Height="26" FontFamily="Comic Sans MS"/>
-            <ListView x:Name="lstView_Transactions" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="3" >
+            <ListView x:Name="lstView_Transactions" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="4" Grid.RowSpan="3" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" >
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>
