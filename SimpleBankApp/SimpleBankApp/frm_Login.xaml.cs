@@ -20,7 +20,7 @@ namespace SimpleBankApp
     /// </summary>
     public partial class frm_Login : Window
     {
-
+        private Account userAccount;
         public frm_Login()
         {
             InitializeComponent();
@@ -29,17 +29,26 @@ namespace SimpleBankApp
 
         private void btn_Login_Click(object sender, RoutedEventArgs e)
         {
-            Account userAccount = Validator.AreDetailValid(txt_AccNumber.Text, txt_PAC.Text);
+            userAccount = Validator.AreDetailValid(txt_AccNumber.Text, txt_PAC.Text);
 
             if(userAccount != null ) 
             {
                 frm_AccountMainPage mainPage = new frm_AccountMainPage(this, userAccount);
+
+                txt_AccNumber.Text = "";
+
+                txt_PAC.Text = "";
 
                 this.Visibility = Visibility.Hidden;
 
                 mainPage.Show();
             }
 
+        }
+
+        public void ChangeUserAccount(Account user_Account)
+        {
+            this.userAccount = user_Account;
         }
 
     }
