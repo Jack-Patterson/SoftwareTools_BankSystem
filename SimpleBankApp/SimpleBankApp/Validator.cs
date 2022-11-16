@@ -9,13 +9,13 @@ using System.Windows;
 
 namespace SimpleBankApp
 {
-    internal class Validator
+    public class Validator
     {
         public static Account AreDetailValid(String accNumber, String PAC)
         {
             if(!EmptyTextCheck(accNumber,PAC)) 
             {
-                if(AccNumericCheck(accNumber) && PACNumericCheck(PAC)) 
+                if(NumericCheck(accNumber) && NumericCheck(PAC)) 
                 {
                     Account userAccount = AccountFound(int.Parse(accNumber));
                     if(userAccount != null) 
@@ -26,7 +26,7 @@ namespace SimpleBankApp
                         }
                         else
                         {
-                            MessageBox.Show("Inccorrect Password");
+                            MessageBox.Show("Incorrect Password");
                         }
                     }
                     else
@@ -36,7 +36,7 @@ namespace SimpleBankApp
                 }
                 else
                 {
-                    MessageBox.Show("Credideitals must be numeric");
+                    MessageBox.Show("Credentials must be numeric");
                 }
             }
             else
@@ -46,16 +46,16 @@ namespace SimpleBankApp
             return null;
         }
 
-        private static Account AccountFound(int accNumber) 
+        public static Account AccountFound(int accNumber) 
         {
             return DBConnector.GetUserById(accNumber);
         }
 
-        private static Boolean AccNumericCheck(String accNumber)
+        public static Boolean NumericCheck(String s)
         {
-            for(int i = 0; i < accNumber.Length; i++)
+            for(int i = 0; i < s.Length; i++)
             {
-                if (!char.IsDigit(accNumber[i]))
+                if (!char.IsDigit(s[i]))
                 {
                     return false;
                 }
@@ -64,20 +64,7 @@ namespace SimpleBankApp
             return true;
         }
 
-        private static Boolean PACNumericCheck(String PAC)
-        {
-            for (int i = 0; i < PAC.Length; i++)
-            {
-                if (!char.IsDigit(PAC[i]))
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        private static Boolean EmptyTextCheck(String accNumber, String PAC)
+        public static Boolean EmptyTextCheck(String accNumber, String PAC)
         {
             if(accNumber.Equals("") || PAC.Equals(""))
             {
