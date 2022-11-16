@@ -33,6 +33,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
+            <Button x:Name="btn_Logout" Grid.Column="2" Grid.Row="1" Content="Logout" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Comic Sans MS" Height="34" Margin="332,0,0,0" Width="68" Click="btn_Logout_Click"/>
 
 
         </Grid>

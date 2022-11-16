@@ -45,7 +45,16 @@ namespace SimpleBankApp
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            Parentform.Close();
+            //Parentform.Close();
+        }
+
+        private void btn_Logout_Click(object sender, RoutedEventArgs e)
+        {
+            Parentform.ChangeUserAccount(null);
+            
+            Parentform.Show();
+
+            this.Close();
         }
     }
 }
