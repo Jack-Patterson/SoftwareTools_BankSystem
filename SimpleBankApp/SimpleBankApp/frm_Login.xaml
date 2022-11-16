@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SimpleBankApp"
         mc:Ignorable="d"
         Title="Login
-        " Height="450" Width="800">
+        " Height="450" Width="800" ResizeMode="CanMinimize">
     <Grid x:Name="grd_Background">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.7*"/>
