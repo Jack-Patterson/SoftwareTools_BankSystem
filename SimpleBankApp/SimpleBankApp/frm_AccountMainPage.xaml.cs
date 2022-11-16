@@ -34,13 +34,11 @@ namespace SimpleBankApp
             InitializeComponent();
             Parentform = parent;
             UserAccount = userAccount;
+            wndw_MainPage.Title = userAccount.getAccountName() + " Account";
             lbl_Welcome.Content += (" " + UserAccount.getAccountName());
             lbl_BalanceHeader.Content += (" € " + UserAccount.getBalance());
             TransactionList = DBConnector.GetTransactionsForID(userAccount.getAccountId());
-
             lstView_Transactions.ItemsSource= TransactionList;
-
-            
         }
 
         private void Window_Closed(object sender, EventArgs e)
