@@ -9,9 +9,9 @@ Basic bank system app for our Software Tools module.
  - Tester - Joseph Diggins
 
 ## Code Locations
-[Main Program](https://github.com/Jack-Patterson/SoftwareTools_BankSystem/tree/main/SimpleBankApp)
-[REST API](https://github.com/Jack-Patterson/SWT_API)
-[Database Creation Script](https://github.com/Jack-Patterson/SoftwareTools_BankSystem/blob/main/DB_CreateScript.sql)
+- [Main Program](https://github.com/Jack-Patterson/SoftwareTools_BankSystem/tree/main/SimpleBankApp)
+- [REST API](https://github.com/Jack-Patterson/SWT_API)
+- [Database Creation Script](https://github.com/Jack-Patterson/SoftwareTools_BankSystem/blob/main/DB_CreateScript.sql)
 
 ## REST API Strings
 You connect the strings to the main url of the Account and Transaction classes.
