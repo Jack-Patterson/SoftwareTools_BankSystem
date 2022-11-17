@@ -9,7 +9,7 @@ namespace SimpleBankAppTests
         [Test]
         public void TestAreDetailsValid()
         {
-            Account validAccount = Validator.AreDetailValid("0", "123456789");
+            Account validAccount = Validator.AreDetailValid("0", "123456");
 
             Assert.IsTrue(validAccount is Account);
 
