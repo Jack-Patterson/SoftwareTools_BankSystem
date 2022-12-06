@@ -23,6 +23,7 @@ namespace SimpleBankApp
         private frm_Login Parentform;
         private Account UserAccount;
         private List<Transaction> TransactionList;
+        private Boolean LogoutButtonClicked = false;
 
         public frm_AccountMainPage()
         {
@@ -41,18 +42,27 @@ namespace SimpleBankApp
             lstView_Transactions.ItemsSource= TransactionList;
         }
 
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            //Parentform.Close();
-        }
-
         private void btn_Logout_Click(object sender, RoutedEventArgs e)
         {
             Parentform.ChangeUserAccount(null);
-            
+
+            LogoutButtonClicked = true;
+
             Parentform.Show();
 
             this.Close();
+        }
+
+        private void wndw_MainPage_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (LogoutButtonClicked)
+            {
+
+            }
+            else
+            {
+                Parentform.Close();
+            }
         }
     }
 }
