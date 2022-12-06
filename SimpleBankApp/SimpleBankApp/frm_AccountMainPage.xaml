@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleBankApp"
         mc:Ignorable="d"
-        Title="frm_AccountMainPage" Height="450" Width="800" Closed="Window_Closed" SizeToContent="WidthAndHeight" MinWidth="550" MinHeight="365" MaxWidth="800" MaxHeight="450" >
+        Title="frm_AccountMainPage" Height="450" Width="800" SizeToContent="WidthAndHeight" MinWidth="550" MinHeight="365" MaxWidth="800" MaxHeight="450" Closing="wndw_MainPage_Closing" >
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
